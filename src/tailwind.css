@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-50%); /* Start from left */
+        opacity: 0; /* Invisible at the start */
+    }
+    30% {
+        transform: translateX(40%); /* Slight overshoot */
+        opacity: 1; /* Fully visible */
+    } 
+    40% {
+        transform: translateX(30%); /* Slight overshoot */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        transform: translateX(20%); /* Back to a slight position */
+        opacity: 1; /* Fully visible */
+    }
+    60% {
+        transform: translateX(10%); /* Back to a slight position */
+        opacity: 1; /* Fully visible */
+    }
+    70% {
+        transform: translateX(5%); /* Slightly adjust position */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateX(0); /* Settle in final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+@keyframes left-right {
+    0%, 100% {
+        transform: translateX(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateX(10%); /* Move to the right */
+    }
+}
+
+.emoji-animation {
+    animation: slide-in-left 0.5s forwards, left-right 1s infinite alternate; /* Combine animations */
+}
+
+
+
+.emoji-animation {
+    animation: slide-in-left 6s ease-out forwards;
+}
+
+
